@@ -57,7 +57,7 @@ function App() {
     formData.append("magazenes", array[2]);
 
     axios
-    .post('/api/upload', formData)
+    .post('https://csv-data-formatter.herokuapp.com/api/upload', formData)
     .then((res) => {
       alert("File Upload success");
     })
