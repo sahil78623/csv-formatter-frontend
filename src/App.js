@@ -29,7 +29,7 @@ function App() {
   const handleISBN = () => {
     if(isbn.length > 0) {
       const getData = async () => {
-        const {data} = await axios.get(`https://csv-data-formatter.herokuapp.com/api/getByISBN/${isbn}`)
+        const {data} = await axios.get(`/api/getByISBN/${isbn}`)
         if(data.length !== 0)
           setData([data])
         else
@@ -43,7 +43,7 @@ function App() {
   const handleEmail = () => {
     if(isbn.length > 0) {
       const getData = async () => {
-        const {data} = await axios.get(`https://csv-data-formatter.herokuapp.com/api/getByEmail/${email}`)
+        const {data} = await axios.get(`/api/getByEmail/${email}`)
         setData(data)
       };
       getData();
@@ -57,7 +57,7 @@ function App() {
     formData.append("magazenes", array[2]);
 
     axios
-    .post('https://csv-data-formatter.herokuapp.com/api/upload', formData)
+    .post('/api/upload', formData)
     .then((res) => {
       alert("File Upload success");
     })
@@ -141,7 +141,7 @@ function App() {
                       <Card.Body>
                         <Card.Title>Sorted By Title</Card.Title>
                         <Form>
-                            <Button variant="secondary" onClick={() => {setURL('https://csv-data-formatter.herokuapp.com/api/sortedData')}}>Sorted Data</Button>{' '}
+                            <Button variant="secondary" onClick={() => {setURL('api/sortedData')}}>Sorted Data</Button>{' '}
                         </Form>
                       </Card.Body>
                     </Card>
@@ -175,7 +175,7 @@ function App() {
                       <Card.Body>
                         <Card.Title>Find Total Data</Card.Title>
                         <Form>
-                            <Button variant="secondary" onClick={() => {setURL('https://csv-data-formatter.herokuapp.com/api/totalData')}}>Total Data</Button>{' '}
+                            <Button variant="secondary" onClick={() => {setURL('/api/totalData')}}>Total Data</Button>{' '}
                         </Form>
                       </Card.Body>
                     </Card>
