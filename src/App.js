@@ -141,7 +141,7 @@ function App() {
                       <Card.Body>
                         <Card.Title>Sorted By Title</Card.Title>
                         <Form>
-                            <Button variant="secondary" onClick={() => {setURL('https://csv-data-formatter.herokuapp.com/api/sortedData')}}>Sorted Data</Button>{' '}
+                            <Button variant="primary" onClick={() => {setURL('https://csv-data-formatter.herokuapp.com/api/sortedData')}}>Sorted Data</Button>{' '}
                         </Form>
                       </Card.Body>
                     </Card>
@@ -175,7 +175,7 @@ function App() {
                       <Card.Body>
                         <Card.Title>Find Total Data</Card.Title>
                         <Form>
-                            <Button variant="secondary" onClick={() => {setURL('https://csv-data-formatter.herokuapp.com/api/totalData')}}>Total Data</Button>{' '}
+                            <Button variant="primary" onClick={() => {setURL('https://csv-data-formatter.herokuapp.com/api/totalData')}}>Total Data</Button>{' '}
                         </Form>
                       </Card.Body>
                     </Card>
